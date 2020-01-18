@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.atama{
+    height: 50px;
+    text-align: center;
+    padding: 0 20px;
+    background-image: linear-gradient(to right, rgb(0, 17, 170) 0%, #4417c2 35%, rgb(104, 6, 185) 90%);
+    color: white;
+}
+
+.atama img{
+    display: block;
+    float: left;
+    margin-left: -10px;
+    cursor: pointer;
+}
+
+#title{
+    text-transform: uppercase; 
+    color: white;
+    line-height: 50px; 
+    float: left;
+    cursor: pointer;
+}
+
+
+.mainbody{
+    background-color: #260548;
+    background-image: linear-gradient(to right, rgb(35, 57, 250) 0%, #6538e0 35%, rgb(133, 39, 211) 90%);
+    background-repeat: no-repeat;
+}
+
+.intro{
+    font-size: 30px;
+    color: white;
+    margin: 20px 20px 0 20px;
+    text-align: center;
+}
+
+.menu{
+    float: right;
+    font-size: 26px;
+}
+
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 0px 10px;
+}
+
+
+.showmenu, .hidemenu{
+    transition: 0.4s;
+    font-size: 25px;
+    cursor: pointer;
+    display: block;
+}
+
+.showmenu{
+    float: right;
+}
+
+.menu a:hover, .showmenu:hover, .hidemenu:hover{
+    color: #74C6FF;
+} 
+
+.showmenu i{
+    float: right;
+    line-height: 50px;
+}
+
+#check{
+    position: absolute;
+    visibility: hidden;
+}
+
+@media screen{
+    .menu{
+        position: fixed;
+        width: 255px;
+        height: 100vh;
+        background-color: #4417c2;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        transition: 0.4s;
+        z-index: 1;
+    }
+
+    .menu a{    
+        transition: 0.4s;
+        display: block;
+        padding: 20px;
+        margin: 0 20px 0 20px;
+    }
+
+    .hidemenu{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    #check:checked ~ .menu{
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 700px){
+    #title{
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.2s;
+    }
+}
+
+.text{
+    display: flex;
+    text-align: center;
+    color: white;
+    padding: 0 10px 0 10px;
+    margin: 30px 10px 40px 10px;
+    max-width: 900px;
+    align-items: center;
+}
+
+.flexbox video{
+    display: block;
+    margin: 20px auto;
+}
+
+.flexbox{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    z-index: -1;
+}
+
+@media screen and (max-width: 600px){
+    .text{
+        font-size: 32px;
+    }
+} 
+@media screen and (min-width: 601px){
+    .text{
+        font-size: 40px;
+    }
+} 
+
+@media screen and (max-width: 700px){
+    .flexbox video{
+        width: 90vw;
+    }
+}
+@media screen and (min-width: 700.1px){
+    .flexbox video{
+        width: 650px;
+    }
+}
+
+.randomtext{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #14274E;
+    color: white;
+    padding: 50px;
+    margin-top: 80px;
+    justify-content: center;
+}
+
+.randomtext h2{
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.randomtext p{
+    font-size: 20px;
+}
+
+.images{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.images img{
+    border: 1px solid white;
+    margin: 20px;
+}
+
+@media screen and (max-width: 550px){
+    .images img{
+        width: 90vw;
+    }
+}
+@media screen and (min-width: 550.1px){
+    .images img{
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 1600px){
+     .flexbox{
+            margin: 30px 20px 20px 20px;
+     }
+}
+
+@media screen and (min-width:1600.1px){
+    .flexbox{
+        margin: 60px 20px 20px 20px;
+    }
+}
+
+footer{
+    display: flex;
+    color: white;
+    background-color: rgb(15, 15, 15);
+    padding: 30px;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 550px){
+    footer{
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 550.1px){
+    footer{
+        font-size: 24px;
+    }
+}
+
+.info{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    font-size: 32px;
+}
+
+.info img{
+    border-radius: 50%;
+    margin: 25px;
+}
+
+.aboutbody{
+    background-image: linear-gradient(to right, rgb(35, 57, 250) 0%, #6538e0 35%, rgb(133, 39, 211) 90%);
+}
+
+.myinfo{
+    display: block;
+}
