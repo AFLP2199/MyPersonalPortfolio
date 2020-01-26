@@ -4,16 +4,16 @@
     font-family: "Roboto", sans-serif;
 }
 
+/* Header design --->*/
+
 .atama{
     height: 50px;
-    text-align: center;
     padding: 0 20px;
-    background-image: linear-gradient(to right, rgb(0, 17, 170) 0%, #4417c2 35%, rgb(104, 6, 185) 90%);
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
     color: white;
 }
 
 .atama img{
-    display: block;
     float: left;
     margin-left: -10px;
     cursor: pointer;
@@ -29,21 +29,24 @@
 
 
 .mainbody{
-    background-color: #260548;
-    background-image: linear-gradient(to right, rgb(35, 57, 250) 0%, #6538e0 35%, rgb(133, 39, 211) 90%);
+    background: #1e1e31;
+    background-image: linear-gradient(to right, #7c20cc, #4a00e0);
     background-repeat: no-repeat;
-}
-
-.intro{
-    font-size: 30px;
-    color: white;
-    margin: 20px 20px 0 20px;
-    text-align: center;
 }
 
 .menu{
     float: right;
     font-size: 26px;
+    position: fixed;
+    width: 255px;
+    height: 100vh;
+    background-color: #151138;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 80px 0;
+    transition: 0.4s;
+    z-index: 1;
 }
 
 
@@ -51,7 +54,10 @@
     text-decoration: none;
     color: white;
     text-transform: uppercase;
-    padding: 0px 10px;
+    transition: 0.4s;
+    display: block;
+    padding: 20px;
+    margin: 0 20px 0 20px;
 }
 
 
@@ -59,15 +65,21 @@
     transition: 0.4s;
     font-size: 25px;
     cursor: pointer;
-    display: block;
 }
 
 .showmenu{
     float: right;
 }
 
+.hidemenu{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+
 .menu a:hover, .showmenu:hover, .hidemenu:hover{
-    color: #74C6FF;
+    color: #8E2DE2;
 } 
 
 .showmenu i{
@@ -76,41 +88,11 @@
 }
 
 #check{
-    position: absolute;
     visibility: hidden;
 }
 
-@media screen{
-    .menu{
-        position: fixed;
-        width: 255px;
-        height: 100vh;
-        background-color: #4417c2;
-        right: -100%;
-        top: 0;
-        text-align: center;
-        padding: 80px 0;
-        line-height: normal;
-        transition: 0.4s;
-        z-index: 1;
-    }
-
-    .menu a{    
-        transition: 0.4s;
-        display: block;
-        padding: 20px;
-        margin: 0 20px 0 20px;
-    }
-
-    .hidemenu{
-        position: absolute;
-        top: 20px;
-        right: 20px;
-    }
-
-    #check:checked ~ .menu{
-        right: 0;
-    }
+#check:checked ~ .menu{
+    right: 0;
 }
 
 @media screen and (max-width: 700px){
@@ -121,7 +103,9 @@
     }
 }
 
-.text{
+/* Content design --->*/
+
+.maintitle{
     display: flex;
     text-align: center;
     color: white;
@@ -144,25 +128,20 @@
     z-index: -1;
 }
 
-@media screen and (max-width: 600px){
-    .text{
-        font-size: 32px;
-    }
-} 
-@media screen and (min-width: 601px){
-    .text{
-        font-size: 40px;
-    }
-} 
-
 @media screen and (max-width: 700px){
     .flexbox video{
         width: 90vw;
+    }
+    .maintitle{
+        font-size: 32px;
     }
 }
 @media screen and (min-width: 700.1px){
     .flexbox video{
         width: 650px;
+    }
+    .maintitle{
+        font-size: 40px;
     }
 }
 
@@ -170,20 +149,44 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    background-color: #14274E;
+    background-image: linear-gradient(to right, #1c1c2e, #24243e, #2d2d4e);
     color: white;
-    padding: 50px;
+    padding: 50px 50px 30px 50px;
     margin-top: 80px;
     justify-content: center;
 }
 
-.randomtext h2{
+.randomtext2{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right, #1c1c2e, #24243e, #2d2d4e);
+    color: white;
+    padding: 0 50px 30px 50px;
+    margin-top: -1px;
+    justify-content: center;
+}
+
+.randomtext3{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right, #1c1c2e, #24243e, #2d2d4e);
+    color: white;
+    margin-top: -1px;
+    padding: 0 50px 30px 50px;
+    justify-content: center;
+}
+
+
+.randomtext h2, .randomtext2 h2, .randomtext3 h2{
     margin-bottom: 10px;
     font-size: 28px;
 }
 
-.randomtext p{
-    font-size: 20px;
+
+.randomtext p, .randomtext2 p, .randomtext3 p{
+    font-size: 24px;
 }
 
 .images{
@@ -195,18 +198,18 @@
 }
 
 .images img{
-    border: 1px solid white;
+    border: 2px solid white;
     margin: 20px;
 }
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 650px){
     .images img{
         width: 90vw;
     }
 }
-@media screen and (min-width: 550.1px){
+@media screen and (min-width: 650.1px){
     .images img{
-        width: 500px;
+        width: 600px;
     }
 }
 
@@ -222,11 +225,19 @@
     }
 }
 
+@media screen and (min-width: 1000px){
+    .randomtext p, .randomtext2 p, .randomtext3 p{
+        margin: 0 100px 0 100px;
+    }
+}
+
+/* Footer design --->*/
+
 footer{
     display: flex;
+    line-height: 100px;
     color: white;
-    background-color: rgb(15, 15, 15);
-    padding: 30px;
+    background: linear-gradient(to right,  #24243e, #302b63);
     justify-content: center;
 }
 
@@ -241,13 +252,25 @@ footer{
         font-size: 24px;
     }
 }
+@media screen and (max-width: 350px){
+    footer{
+        font-size: 16px;
+    }
+}
+
+/* About page--->*/
 
 .info{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     color: white;
-    font-size: 32px;
+    text-align: center;
+}
+
+.info .name{
+    margin-bottom: 20px;
 }
 
 .info img{
@@ -255,10 +278,72 @@ footer{
     margin: 25px;
 }
 
-.aboutbody{
-    background-image: linear-gradient(to right, rgb(35, 57, 250) 0%, #6538e0 35%, rgb(133, 39, 211) 90%);
+.basicinfo{
+    list-style: none;
+    margin-top: 20px;
 }
 
-.myinfo{
-    display: block;
+.basicinfo li{
+    margin: 10px 10px 0 10px;
 }
+
+.aboutbody{
+    background-color: #1e1e31;
+    background-image: linear-gradient(to right, #1c1c2e, #24243e, #2d2d4e);
+    background-repeat: no-repeat;
+}
+
+.contentaboutme{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 80px 20px 50px 20px;
+    align-items: center;
+    z-index: -1;
+}
+
+
+@media screen and (max-width: 550px){
+    .info{
+        font-size: 26px;
+    }
+    .socialmedia h2{
+        font-size: 26px;    
+    }
+}
+
+@media screen and (min-width: 550.1px){
+    .info{
+        font-size: 30px;
+    }
+    .socialmedia h2{
+        font-size: 30px;    
+    }
+}
+
+.socialmedia{
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.socialmedia h2{
+    color: white;
+    font-size: 40px;
+    margin-bottom: 20px;    
+}
+
+
+.socialmediabutton{
+    color: white;
+    font-size: 60px;
+    margin: 0 10px 0 10px;
+}
+
+.socialmediabutton:hover{
+    color: #8E2DE2; 
+    transition: 0.4s;
+}
+
+
+
+    
