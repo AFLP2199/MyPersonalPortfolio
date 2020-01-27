@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", 'Raleway', sans-serif;
 }
 
 /* Header design --->*/
@@ -32,6 +32,66 @@
     background: #1e1e31;
     background-image: linear-gradient(to right, #7c20cc, #4a00e0);
     background-repeat: no-repeat;
+}
+
+.menu{
+    float: right;
+    font-size: 26px;
+    position: fixed;
+    width: 255px;
+    height: 100vh;
+    background-color: #151138;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 80px 0;
+    transition: 0.4s;
+    z-index: 1;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    transition: 0.4s;
+    display: block;
+    padding: 20px;
+    margin: 0 20px 0 20px;
+}
+
+
+.showmenu, .hidemenu{
+    transition: 0.4s;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.showmenu{
+    float: right;
+}
+
+.hidemenu{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+
+.menu a:hover, .showmenu:hover, .hidemenu:hover{
+    color: #8E2DE2;
+} 
+
+.showmenu i{
+    float: right;
+    line-height: 50px;
+}
+
+#check{
+    visibility: hidden;
+}
+
+#check:checked ~ .menu{
+    right: 0;
 }
 
 @media screen and (max-width: 700px){
@@ -91,7 +151,7 @@
     background-image: linear-gradient(to right, #1c1c2e, #24243e, #2d2d4e);
     color: white;
     padding: 50px 50px 30px 50px;
-    margin-top: 80px;
+    margin-top: 60px;
     justify-content: center;
 }
 
@@ -196,5 +256,93 @@ footer{
         font-size: 16px;
     }
 }
+
+/* About page--->*/
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.info .name{
+    margin-bottom: 20px;
+}
+
+.info img{
+    border-radius: 50%;
+    margin: 25px;
+}
+
+.basicinfo{
+    list-style: none;
+    margin-top: 20px;
+}
+
+.basicinfo li{
+    margin: 10px 10px 0 10px;
+}
+
+.aboutbody, .worksbody{
+    background-color: #1a1a2b;
+    background-image: linear-gradient(to right, #1c1c2e, #24243e, #2d2d4e);
+    background-repeat: no-repeat;
+}
+
+.contentaboutme{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 80px 20px 50px 20px;
+    align-items: center;
+    z-index: -1;
+}
+
+
+@media screen and (max-width: 550px){
+    .info{
+        font-size: 26px;
+    }
+    .socialmedia h2{
+        font-size: 26px;    
+    }
+}
+
+@media screen and (min-width: 550.1px){
+    .info{
+        font-size: 30px;
+    }
+    .socialmedia h2{
+        font-size: 30px;    
+    }
+}
+
+.socialmedia{
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.socialmedia h2{
+    color: white;
+    font-size: 40px;
+    margin-bottom: 20px;    
+}
+
+
+.socialmediabutton{
+    color: white;
+    font-size: 60px;
+    margin: 0 10px 0 10px;
+}
+
+.socialmediabutton:hover{
+    color: #8E2DE2; 
+    transition: 0.4s;
+}
+
+
 
     
