@@ -25,84 +25,23 @@
     line-height: 50px; 
     float: left;
     cursor: pointer;
+    transition: 0.2s;
 }
-
 
 .mainbody{
     background: #1e1e31;
-    background-image: linear-gradient(to right, #7c20cc, #4a00e0);
+    background-image: linear-gradient( 111.3deg,  rgba(74,105,187,1) 9.6%, rgba(205,77,204,1) 93.6% );
     background-repeat: no-repeat;
-}
-
-.menu{
-    float: right;
-    font-size: 26px;
-    position: fixed;
-    width: 255px;
-    height: 100vh;
-    background-color: #151138;
-    right: -100%;
-    top: 0;
-    text-align: center;
-    padding: 80px 0;
-    transition: 0.4s;
-    z-index: 1;
-}
-
-.menu a{
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-    transition: 0.4s;
-    display: block;
-    padding: 20px;
-    margin: 0 20px 0 20px;
-}
-
-
-.showmenu, .hidemenu{
-    transition: 0.4s;
-    font-size: 25px;
-    cursor: pointer;
-}
-
-.showmenu{
-    float: right;
-}
-
-.hidemenu{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-
-.menu a:hover, .showmenu:hover, .hidemenu:hover{
-    color: #8E2DE2;
-} 
-
-.showmenu i{
-    float: right;
-    line-height: 50px;
-}
-
-#check{
-    visibility: hidden;
-}
-
-#check:checked ~ .menu{
-    right: 0;
 }
 
 @media screen and (max-width: 700px){
     #title{
         opacity: 0;
         visibility: hidden;
-        transition: 0.2s;
     }
 }
 
-/* Content design --->*/
+/* Main content design --->*/
 
 .maintitle{
     display: flex;
@@ -116,7 +55,7 @@
 
 .flexbox video{
     display: block;
-    margin: 20px auto;
+    margin: 20px;
 }
 
 .flexbox{
@@ -125,6 +64,7 @@
     justify-content: space-around;
     align-items: center;
     z-index: -1;
+    margin: 30px 20px 40px 20px;
 }
 
 @media screen and (max-width: 700px){
@@ -144,120 +84,79 @@
     }
 }
 
-.randomtext{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    background-image: linear-gradient(to right, #1c1c2e, #24243e, #2d2d4e);
-    color: white;
-    padding: 50px 50px 30px 50px;
-    margin-top: 60px;
-    justify-content: center;
-}
+/* Projects design --->*/
 
-.randomtext2{
-    text-align: center;
+.works{
     display: flex;
-    flex-direction: column;
-    background-image: linear-gradient(to right, #1c1c2e, #24243e, #2d2d4e);
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    text-align: center;
+    background: linear-gradient(to right,  #24243e, #302b63);
     color: white;
-    padding: 0 50px 30px 50px;
+    padding: 40px 50px 50px 50px;
     margin-top: -1px;
-    justify-content: center;
+}
+.works h2{
+    font-size: 40px;
+    margin-bottom: 25px;
 }
 
-.randomtext3{
-    text-align: center;
+.overlaywork1{
     display: flex;
-    flex-direction: column;
-    background-image: linear-gradient(to right, #1c1c2e, #24243e, #2d2d4e);
-    color: white;
-    margin-top: -1px;
-    padding: 0 50px 30px 50px;
     justify-content: center;
-}
-
-
-.randomtext h2, .randomtext2 h2, .randomtext3 h2{
-    margin-bottom: 10px;
+    flex-direction: column;
+    position: absolute;
+    height: 285px;
+    width: 300px;
+    opacity: 0;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
     font-size: 28px;
+    z-index: 111;
+    user-select: none;
+    transition: 0.4s;
 }
 
-
-.randomtext p, .randomtext2 p, .randomtext3 p{
-    font-size: 24px;
-}
-
-.images{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.images img{
-    border: 2px solid white;
+.work1 h3{
     margin: 20px;
+    font-size: 24px;
+    color: white;
+    transition: 0.4s;
 }
 
+.work1 a{
+    text-decoration: none;
+}
+
+#work1img{
+    position: relative;
+    height: 285px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+#work1title:hover{
+    color: rgba(205,77,204,1); 
+}
+.overlaywork1:hover{
+    opacity: 0.6;
+}
+/*
 @media screen and (max-width: 650px){
-    .images img{
-        width: 90vw;
+    #work1img{
+        height: 185px;
+        width: 200px;
     }
 }
 @media screen and (min-width: 650.1px){
-    .images img{
-        width: 600px;
+    #work1img{
+        height: 285px;
+        width: 300px;
     }
 }
-
-@media screen and (max-width: 1600px){
-     .flexbox{
-            margin: 30px 20px 20px 20px;
-     }
-}
-
-@media screen and (min-width:1600.1px){
-    .flexbox{
-        margin: 60px 20px 20px 20px;
-    }
-}
-
-@media screen and (min-width: 1000px){
-    .randomtext p, .randomtext2 p, .randomtext3 p{
-        margin: 0 100px 0 100px;
-    }
-}
-
-/* Footer design --->*/
-
-footer{
-    display: flex;
-    line-height: 100px;
-    color: white;
-    background: linear-gradient(to right,  #24243e, #302b63);
-    justify-content: center;
-}
-
-
-@media screen and (max-width: 550px){
-    footer{
-        font-size: 20px;
-    }
-}
-@media screen and (min-width: 550.1px){
-    footer{
-        font-size: 24px;
-    }
-}
-@media screen and (max-width: 350px){
-    footer{
-        font-size: 16px;
-    }
-}
-
-/* About page--->*/
+*/
+/* About --->*/
 
 .info{
     display: flex;
@@ -286,17 +185,17 @@ footer{
     margin: 10px 10px 0 10px;
 }
 
-.aboutbody, .worksbody{
-    background-color: #1a1a2b;
-    background-image: linear-gradient(to right, #1c1c2e, #24243e, #2d2d4e);
-    background-repeat: no-repeat;
+.aboutbody{
+    background-color: rgb(61, 75, 114);
+    padding-bottom: 40px;
 }
 
 .contentaboutme{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    margin: 80px 20px 50px 20px;
+    margin: -1px 20px 50px 20px;
+    padding-top: 60px;
     align-items: center;
     z-index: -1;
 }
@@ -322,7 +221,7 @@ footer{
 
 .socialmedia{
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 0px;
 }
 
 .socialmedia h2{
@@ -336,13 +235,36 @@ footer{
     color: white;
     font-size: 60px;
     margin: 0 10px 0 10px;
-}
-
-.socialmediabutton:hover{
-    color: #8E2DE2; 
     transition: 0.4s;
 }
 
+.socialmediabutton:hover{
+    color: rgba(205,77,204,1); 
+}
+
+/* Footer design --->*/
+
+footer{
+    display: flex;
+    line-height: 100px;
+    color: white;
+    background: linear-gradient(to right,  #24243e, #302b63);
+    justify-content: center;
+}
 
 
-    
+@media screen and (max-width: 550px){
+    footer{
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 550.1px){
+    footer{
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 350px){
+    footer{
+        font-size: 16px;
+    }
+}
