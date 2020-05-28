@@ -45,17 +45,13 @@
 
 .maintitle{
     display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     color: white;
     padding: 0 10px 0 10px;
-    margin: 30px 10px 40px 10px;
+    margin: 20px 10px 40px 10px;
     max-width: 900px;
-    align-items: center;
-}
-
-.flexbox video{
-    display: block;
-    margin: 20px;
 }
 
 .flexbox{
@@ -64,7 +60,7 @@
     justify-content: space-around;
     align-items: center;
     z-index: -1;
-    margin: 30px 20px 40px 20px;
+    margin: 40px 20px 40px 20px;
 }
 
 @media screen and (max-width: 700px){
