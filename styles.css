@@ -50,7 +50,7 @@
     text-align: center;
     color: white;
     padding: 0 10px 0 10px;
-    margin: 20px 10px 40px 10px;
+    margin: 20px 40px 40px 40px;
     max-width: 900px;
 }
 
@@ -106,7 +106,7 @@
     height: 285px;
     width: 300px;
     opacity: 0;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 50%;
     font-size: 28px;
     z-index: 111;
@@ -136,7 +136,7 @@
     color: rgba(205,77,204,1); 
 }
 .overlaywork1:hover{
-    opacity: 0.6;
+    opacity: 1;
 }
 /*
 @media screen and (max-width: 650px){
