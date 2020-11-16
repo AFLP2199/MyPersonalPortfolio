@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="project, new page, initial">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" id="stylesheet" href="light-mode.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
     <title>Home</title>
     <link rel="shortcut icon" href="images/FinalLogo.png" type="image/x-icon">
@@ -15,10 +16,12 @@
 
 <body class="mainbody">
     <header>
-        <div class="atama">
-                <a href="index.html" title="Home"><img src="images/logo_white.png" alt="Logo" width="50px"></a> 
-                <a href="index.html" title="Home"><h2 id="title">My portfolio</h2></a> 
-        </div>
+            <a href="index.html" title="Home"><img id='imagelogo'src="images/logo_black.png" alt="Logo" width="50px"></a> 
+            <a href="index.html" title="Home"><h2 id="title">My portfolio</h2></a> 
+            <label class="toggle on" for="change-mode" title="Toggle dark mode"><i class="fas fa-toggle-on"></i></label>
+            <label class="toggle off" for="change-mode" title="Toggle light mode"><i class="fas fa-toggle-off"></i></label>
+            <h3 id="label">Light Mode</h3>
+            <input type="checkbox" id="change-mode">
     </header>
     
     <div class="flexbox">
@@ -29,10 +32,9 @@
             <video src="images/video.mp4" autoplay="1" muted="1" loop="1" controls="1">Sample</video>
         </div>
     </div>
-
-    <section class="works">
+    <section class="works" >
         <h2>My Projects</h2>
-        <div class="work1">
+        <div class="work1" data-aos="zoom-in" data-aos-duration="750">
             <div class="overlaywork1">
                 <h3>Calculator made with HTML, CSS & Javascript</h3>
             </div>
@@ -40,30 +42,39 @@
             <a href="https://aflp2199.github.io/SimpleCalculator"><h3 id="work1title">Simple calculator</h3></a>
         </div>
     </section>
-    
-    <section class="aboutbody">
-        <div class="contentaboutme">
-            <div class="info">
-                <h2 class="aboutme">About me...</h2>
-                <img src="images/profile.png" alt="File photo" width="256">
-                <h2 class="name">Agustin Lopez</h2>
-                <p>I'm a 20 years old argentinean sophomore studying to be a front-end developer.</p>
-                <ul class="basicinfo">
-                    <li><b>Languages</b>: Spanish and english.</li>
-                    <li><b>Web development</b>: HTML and CSS.</li>
-                    <li><b>Programming languages</b>: Basic knowledge on C and Javascript.</li>
-                </ul>
+    <div class="about">
+        <section class="aboutbody" data-aos="fade-right">
+            <div class="contentaboutme">
+                <div class="info" >
+                    <h2 class="aboutme">About me...</h2>
+                    <img src="images/profile.png" alt="File photo" width="192">
+                    <h2 class="name">Agustin Lopez</h2>
+                    <p>I'm a 21 years old argentinean sophomore studying to be a front-end developer and engineer.</p>
+                    <ul class="basicinfo">
+                        <li><b>Languages</b>: Spanish and english.</li>
+                        <li><b>Web development</b>: HTML and CSS.</li>
+                        <li><b>Programming languages</b>: Basic knowledge on C, C++ and Javascript (including jquery library).</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="socialmedia">
-            <h2>My social media:</h2>
-            <a href="https://www.github.com/AFLP2199" class="socialmediabutton" target="_blank" title="Github"><i class="fab fa-github"></i></i></a>
-        </div>    
-    </section>
-    
+            <div class="socialmedia">
+                <h2>My social media:</h2>
+                <a href="https://www.github.com/AFLP2199" class="socialmediabutton" target="_blank" title="Github"><i class="fab fa-github"></i></i></a>
+            </div>    
+        </section>
+    </div>
     <footer>
         <p>© 2020 AFLP All rights reserved.</p>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="code.js"></script>
 </body>
-
 </html>
+
+<script>
+    
+    AOS.init({
+        once: true
+    });
+    
+</script>
