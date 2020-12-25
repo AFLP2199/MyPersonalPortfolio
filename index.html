@@ -6,17 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="project, new page, initial">
-    <link rel="stylesheet" id="stylesheet" href="light-mode.css">
+    <link rel="stylesheet" id="stylesheet" href="assets/css/light-mode.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
     <title>Home</title>
-    <link rel="shortcut icon" href="images/FinalLogo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/FinalLogo.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/fa57f7ea31.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="mainbody">
     <header>
-            <a href="index.html" title="Home"><img id='imagelogo'src="images/logo_black.png" alt="Logo" width="50px"></a> 
+            <a href="index.html" title="Home"><img id='imagelogo'src="assets/images/logo_black.png" alt="Logo" width="50px"></a> 
             <a href="index.html" title="Home"><h2 id="title">My portfolio</h2></a> 
             <label class="toggle on" for="change-mode" title="Toggle dark mode"><i class="fas fa-toggle-on"></i></label>
             <label class="toggle off" for="change-mode" title="Toggle light mode"><i class="fas fa-toggle-off"></i></label>
@@ -29,17 +29,26 @@
             <p>Welcome to my website</p>
         </div>
         <div class="video">
-            <video src="images/video.mp4" autoplay="1" muted="1" loop="1" controls="1">Sample</video>
+            <video src="assets/images/video.mp4" autoplay="1" muted="1" loop="1" controls="1">Sample</video>
         </div>
     </div>
     <section class="works" >
         <h2>My Projects</h2>
-        <div class="work1" data-aos="zoom-in" data-aos-duration="750">
-            <div class="overlaywork1">
-                <h3>Calculator made with HTML, CSS & Javascript</h3>
+        <div id="work-section">
+            <div class="work-items" data-aos="zoom-in" data-aos-duration="700">
+                <div class="overlaywork">
+                    <h3>Calculator made with HTML, CSS & Javascript</h3>
+                </div>
+                <img src="assets/images/work1.PNG" alt="Project1image" class="imageproject">
+                <br><a href="https://aflp2199.github.io/SimpleCalculator">Simple calculator</a>
             </div>
-            <img src="images/work1.PNG" alt="Project1image" id="work1img">
-            <a href="https://aflp2199.github.io/SimpleCalculator"><h3 id="work1title">Simple calculator</h3></a>
+            <div class="work-items" data-aos="zoom-in" data-aos-duration="700">
+                <div class="overlaywork">
+                    <h3>Website for Apinta Castelar (CSS, Javascript, Jquery)</h3>
+                </div>
+                <img src="assets/images/apinta.png" alt="Project2image" class="imageproject">
+                <br><a href="https://apintacastelar.com.ar/home/">Apinta Castelar</a>
+            </div>
         </div>
     </section>
     <div class="about">
@@ -47,7 +56,7 @@
             <div class="contentaboutme">
                 <div class="info" >
                     <h2 class="aboutme">About me...</h2>
-                    <img src="images/profile.png" alt="File photo" width="192">
+                    <img src="assets/images/profile.png" alt="File photo" width="192">
                     <h2 class="name">Agustin Lopez</h2>
                     <p>I'm a 21 years old argentinean sophomore studying to be a front-end developer and engineer.</p>
                     <ul class="basicinfo">
@@ -67,7 +76,7 @@
         <p>© 2020 AFLP All rights reserved.</p>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="code.js"></script>
+    <script src="assets/javascript/code.js"></script>
 </body>
 </html>
 
