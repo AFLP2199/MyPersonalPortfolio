@@ -9,16 +9,16 @@
 header{
     height: 50px;
     padding: 0 20px;
-    background: linear-gradient(to right, #b5b1d4, #948fc9, #6f6faa);
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    color: white;
 }
-
+header a{
+    user-select: none;
+}
 header img{
     float: left;
     margin-left: -10px;
     cursor: pointer;
-}
-header a{
-    user-select: none;
 }
 #change-mode{
     display: none;
@@ -30,7 +30,7 @@ header a{
     cursor: pointer;
     transition: 0.4s;
 }
-.off{
+.on{
     display: none;
 }
 
@@ -41,7 +41,7 @@ header a{
 }
 #title{
     text-transform: uppercase; 
-    color: #000000;
+    color: white;
     line-height: 50px; 
     float: left;
     cursor: pointer;
@@ -49,8 +49,8 @@ header a{
 }
 
 .mainbody{
-    background-color: #8EC5FC;
-    background-image: linear-gradient(90deg, #a3cdf8 0%, #eee1fa 80%);    
+    background: #1e1e31;
+    background-image: linear-gradient( 111.3deg,  rgba(74,105,187,1) 9.6%, rgba(205,77,204,1) 93.6% );
     background-repeat: no-repeat;
 }
 
@@ -67,7 +67,7 @@ header a{
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #292929;
+    color: white;
     padding: 0 10px 0 10px;
     margin: 20px 40px 40px 40px;
     max-width: 900px;
@@ -100,9 +100,10 @@ header a{
 }
 
 /* Projects design --->*/
+
 .works{
-    background: #b5b1d4;
-    background: linear-gradient(to right, #b5b1d4, #948fc9, #6f6faa);
+    background: linear-gradient(to right,  #24243e, #302b63);
+    color: white;
     padding: 40px 50px 50px 50px;
 }
 #work-section{
@@ -113,7 +114,6 @@ header a{
     flex-wrap: wrap;
 }
 .works h2{
-    color: #292929;
     font-size: 30px;
     margin-bottom: 25px;
     text-align: center;
@@ -123,6 +123,7 @@ header a{
     text-align: center;
     margin: 10px 20px;
 }
+
 .overlaywork{
     display: flex;
     justify-content: center;
@@ -131,8 +132,9 @@ header a{
     height: 285px;
     width: 300px;
     opacity: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 50%;
+    font-size: 28px;
     z-index: 111;
     user-select: none;
     transition: 0.3s;
@@ -144,12 +146,11 @@ header a{
     transition: 0.3s;
     color: #ffffff;
 }
-
 .work-items a{
     font-size: 22px;
     font-weight: bold;
     text-decoration: none;
-    color: #292929;
+    color: #ffffff;
 }
 
 .imageproject{
@@ -162,7 +163,7 @@ header a{
 
 .work-items a:hover{
     transition: 0.3s;
-    color: #5928a8; 
+    color: #cd4dcc; 
 }
 .overlaywork:hover{
     opacity: 1;
@@ -181,17 +182,15 @@ header a{
     }
 }
 /* About --->*/
-
 .about{
-    background: rgb(222,232,255);
-    background: linear-gradient(90deg, #dee8ff 0%, #f2f7ff 0%);
+    background-color: rgb(61, 75, 114);
 }
 .info{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #616161;
+    color: white;
     text-align: center;
 }
 
@@ -214,8 +213,7 @@ header a{
 }
 
 .aboutbody{
-    background: rgb(222,232,255);
-    background: linear-gradient(90deg, #dee8ff 0%, #f2f7ff 0%);
+    background-color: rgb(61, 75, 114);
     padding-bottom: 40px;
 }
 
@@ -229,28 +227,27 @@ header a{
     z-index: -1;
 }
 
-
 .socialmedia{
     text-align: center;
     margin-bottom: 0px;
 }
 
 .socialmedia h2{
-    color: #616161;
+    color: white;
     font-size: 40px;
     margin-bottom: 20px;    
 }
 
 
 .socialmediabutton{
-    color: #616161;
+    color: white;
     font-size: 50px;
     margin: 0 10px 0 10px;
     transition: 0.3s;
 }
 
 .socialmediabutton:hover{
-    color: #5928a8; 
+    color: rgba(205,77,204,1); 
 }
 
 /* Footer design --->*/
@@ -258,9 +255,9 @@ header a{
 footer{
     display: flex;
     line-height: 100px;
-    color: #ffffff;
+    color: white;
     font-weight: 300;
-    background: #6f6faa;
+    background: linear-gradient(to right,  #24243e, #302b63);
     justify-content: center;
 }
 
